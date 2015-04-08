@@ -1,0 +1,28 @@
+.text-style {
+	color: #fff;
+	background: rgba(0,0,0,0.5);
+	padding: 8px;
+	line-height: $multiplier * 5;
+}
+
+.row {
+  float: left;
+	width: $full-width;
+}
+
+.bg-cover {
+	background-size: cover!important;
+	background-attachment: fixed!important;
+}
+
+.border-radius{
+	border-radius: 8px;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+}
+
+.animate {
+	transition : .5s all;
+	-moz-transition : .5s all;
+	-webkit-transition : .5s all;
+}

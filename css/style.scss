@@ -1,0 +1,164 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald:400,700);
+@import 'variables.scss';
+@import 'extend.scss';
+
+* {
+	padding: 0;
+	margin: 0;
+	outline: none;
+	box-sizing : border-box;
+	-moz-box-sizing : border-box;
+	-webkit-box-sizing : border-box;
+}
+
+html, body {
+	height: $full-width;
+	font-family: $font-oswald;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
+
+.container {
+	width: 950px;
+	margin: 0 auto;
+}
+
+.banner-container,
+.full-banner,
+.header-nav,
+.header-nav > ul {
+	@extend .row;
+}
+
+.full-banner {
+	min-height: $full-width;
+}
+
+.first {
+	background-image: url($url + 'first.jpg');
+	background-repeat: no-repeat;
+	@extend .bg-cover;
+	padding-top: 38px;
+	.btn {
+			background: $bg-orange;
+			border-color: $border-orange;
+			&:hover{
+				background: $border-orange;
+		}
+	}
+}
+
+.second {
+	background: url($url + 'second.jpg') no-repeat;
+	@extend .bg-cover;
+	.btn {
+			background: $bg-blue;
+			border-color: $border-blue;
+			&:hover{
+			background: $border-blue;
+		}
+	}
+}
+
+.third {
+	background: url($url + 'third.jpg') no-repeat;
+	@extend .bg-cover;
+	.btn {
+			background: $bg-green;
+			border-color : $border-green;
+			&:hover {
+				background: $border-green;
+			}
+	}
+}
+
+.fourth {
+	background: url($url + 'fourth.jpg') no-repeat;
+	@extend .bg-cover;
+	.btn {
+		background: $bg-red;
+		border-color: $border-red;
+		&:hover {
+			background: $border-red;
+		}
+	}
+}
+
+header.primary {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.header-nav {
+  ul {
+  	text-align: center;
+		background: #000;
+		padding: 7px 0;
+	}
+	li {
+		display: inline-block;
+		list-style: none;
+		margin: 0 $multiplier * 1.2;
+		a {
+			color: #fff;
+			font-size: $multiplier * 2;
+			text-decoration: none;
+			font-family: $font-arial;
+		}	
+	}
+	li.active{
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+
+.banner-content {
+	width: 500px;
+	h1 {
+		@extend .text-style;
+		font-family: $font-oswald;
+		font-weight: $font-weight * 4;
+		font-size: $multiplier * 5;
+		margin-bottom: $multiplier * 3;
+	}
+	p {
+		@extend .text-style;
+		font-family: $font-arial;
+		font-size: $multiplier * 2;
+		margin-bottom: $multiplier * 1.5;
+		line-height: $multiplier * 2.2;
+	}
+}
+
+.banner-container {
+	margin-top: $multiplier * 13.5;
+}
+
+.tree {
+	text-align: center;
+}
+
+.btn-container {
+	margin-top: 10px;
+}
+
+.btn {
+	@extend .border-radius;
+	@extend .animate;
+	font-family: $font-oswald;
+	font-weight: $multiplier * 7;
+	color: #fff;
+	border : 3px solid;
+	padding: 12px 30px;
+	font-size: $multiplier * 3;
+	text-transform: uppercase; 
+	text-decoration: none;
+}
